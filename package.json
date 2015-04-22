@@ -1,0 +1,26 @@
+{
+  "name": "this-rocket-is-on-fire",
+  "version": "1.0.0",
+  "description": "playing with css and js animations",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/curatecode/this-rocket-is-on-fire.git"
+  },
+  "author": "curateco.de",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/curatecode/this-rocket-is-on-fire/issues"
+  },
+  "homepage": "https://github.com/curatecode/this-rocket-is-on-fire",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-uglify": "^0.9.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-sass": "^0.18.1",
+    "jshint-stylish": "^1.0.1"
+  }
+}
