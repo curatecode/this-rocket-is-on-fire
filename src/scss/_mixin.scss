@@ -1,0 +1,93 @@
+
+/*== CSS3 magics */
+@mixin rounded($radius: 10px) {
+  border-radius: $radius;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+}
+
+@mixin box-shadow($x: 0, $y: 1px, $blur: 0px, $color: #999) {
+  box-shadow:$x $y $blur $color ;
+  -moz-box-shadow:$x $y $blur $color ;
+  -webkit-box-shadow:$x $y $blur $color ;
+}
+
+@mixin box-shadow2($param) {
+  box-shadow:$param;
+  -moz-box-shadow:$param;
+  -webkit-box-shadow:$param ;
+}
+
+@mixin box-shadow-inset($x: 0, $y: 1px, $blur: 0px, $color: #999) {
+  box-shadow:$x $y $blur $color inset;
+  -moz-box-shadow:$x $y $blur $color inset;
+  -webkit-box-shadow:$x $y $blur $color inset;
+}
+
+@mixin box-shadow-multi($param, $param2){
+  box-shadow:$param,$param2 ;
+  -moz-box-shadow:$param,$param2;
+  -webkit-box-shadow:$param,$param2;
+}
+
+@mixin gradient($from:#222, $to:#000) {
+  background: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
+  background: -moz-linear-gradient(top,  $from,  $to);
+  //filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='$from', endColorstr='$to');
+}
+
+@mixin text-shadow($x: 0, $y: 0, $blur: 1px, $color: #999) {
+  -webkit-text-shadow: $x $y $blur $color;
+  -moz-text-shadow: $x $y $blur $color;
+  text-shadow: $x $y $blur $color;
+}
+
+@mixin animation($syntax) {
+  -webkit-animation: $syntax;
+     -moz-animation: $syntax;
+          animation: $syntax;
+}
+
+@mixin transform($syntax){
+-webkit-transform: $syntax;
+   -moz-transform: $syntax;
+      transform: $syntax;
+}
+
+@mixin scale($syntax) {
+  -webkit-transform: scale($syntax);
+     -moz-transform: scale($syntax);
+      -ms-transform: scale($syntax);
+       -o-transform: scale($syntax);
+          transform: scale($syntax);
+}
+
+@mixin transition($syntax) {
+  transition: $syntax;
+  -moz-transition: $syntax;
+  -webkit-transition: $syntax;
+  -o-transition: $syntax;
+}
+
+@mixin filter($syntax){
+-webkit-filter: $syntax;
+   -moz-filter: $syntax;
+      filter: $syntax;
+}
+
+
+// RETINA JS
+@mixin at2x($path, $ext: "jpg", $w: auto, $h: auto) {
+  $at1x_path: "#{$path}.#{$ext}";
+  $at2x_path: "#{$path}@2x.#{$ext}";
+
+  background-image: url("#{$at1x_path}");
+
+  @media all and (-webkit-min-device-pixel-ratio : 1.5),
+         all and (-o-min-device-pixel-ratio: 3/2),
+         all and (min--moz-device-pixel-ratio: 1.5),
+         all and (min-device-pixel-ratio: 1.5) {
+           background-image: url("#{$at2x_path}");
+           background-size: $w $h;
+  }
+}
