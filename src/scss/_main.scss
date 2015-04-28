@@ -1,3 +1,61 @@
-body.test {
-	color: green;
+body,html {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	background: #384B64;
+}
+
+.box {
+	position: relative;
+}
+
+.launcher {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	height: 100px;
+	width: 100px;
+	display: block;
+	background: #fff;
+	padding: 4px 6px 6px 4px;
+	@include rounded(100px);
+	@include box-shadow(0px,3px,1px,rgba(0,0,0,0.2));
+	a {
+		display: block;
+		border: 1px solid #F02222;
+		height: 100%;
+		width: 100%;
+		@include gradient(#D71E1E,#F02222);
+		@include box-shadow-multi(inset 0 -4px 0 rgba(0, 0, 0, 0.1), inset 0 2px 1px #FF8686);
+		@include rounded(100px);
+	}
+}
+
+#fly-me {
+	height: 40px;
+	width: 10px;
+	background: rgba(255,255,255,0.3);
+	border: 1px solid rgba(255,255,255,0.5);
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	@include transform(translate(50%, 0%));
+}
+
+.to-the-moon {
+	@include animation(fly-high 10s linear);
+}
+
+// Animations
+
+@-webkit-keyframes fly-high {
+	0%		{bottom: 0%;}
+	10%		{bottom: 10%;}
+	20%		{bottom: 20%;}
+	30%		{bottom: 30%; left: 50%;}
+	60%		{left: 51%;}
+	90%		{left: 53%;}
+	100% 	{bottom: 150%;}
 }
