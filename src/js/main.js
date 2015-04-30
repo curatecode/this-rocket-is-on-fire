@@ -17,7 +17,7 @@ $(document).ready(function() {
 		setTimeout(function() {
 			$('.launcher').removeClass('hide-me');
 			$('#fly-me').removeClass('to-the-moon');
-		},8000);
-		
+		},15000);
+
 	});
 });

@@ -68,21 +68,21 @@ body {
 }
 
 .to-the-moon {
-	@include animation(fly-high 10s linear);
+	@include animation(fly-high 15s linear);
 }
 
 // Animations
 
 @-webkit-keyframes fly-high {
 	0%		{bottom: 0%;}
-	10%		{bottom: 5%;}
-	15%		{bottom: 10%;}
-	20%		{bottom: 15%;}
-	25%		{bottom: 20%;}
-	30%		{bottom: 25%;}
-	35%		{bottom: 30%;}
+	5%		{bottom: 5%;}
+	10%		{bottom: 10%;}
+	15%		{bottom: 15%;}
+	20%		{bottom: 20%;}
+	25%		{bottom: 25%;}
+	30%		{bottom: 30%;}
 	40%		{bottom: 40%;}
-	60%		{left: 50%; @include transform(rotate(0deg));}
-	90%		{left: 51%; @include transform(rotate(10deg));}
-	100% 	{bottom: 150%;}
+	55%		{bottom: 55%; left: 50%; @include transform(rotate(0deg));}
+	75%		{bottom: 75%; left: 50.2%; @include transform(rotate(2deg));}
+	100% 	{bottom: 110%; left: 50.9%; @include transform(rotate(3deg));}
 }
