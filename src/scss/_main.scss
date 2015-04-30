@@ -73,7 +73,7 @@ body {
 
 // Animations
 
-@-webkit-keyframes fly-high {
+@include keyframes(fly-high) {
 	0%		{bottom: 0%;}
 	5%		{bottom: 5%;}
 	10%		{bottom: 10%;}

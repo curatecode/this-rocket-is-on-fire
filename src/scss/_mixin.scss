@@ -75,6 +75,18 @@
       filter: $syntax;
 }
 
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes $animation-name {
+    @content;
+  }
+  @-moz-keyframes $animation-name {
+    @content;
+  }
+  @keyframes $animation-name {
+    @content;
+  }
+}
+
 
 // RETINA JS
 @mixin at2x($path, $ext: "jpg", $w: auto, $h: auto) {
