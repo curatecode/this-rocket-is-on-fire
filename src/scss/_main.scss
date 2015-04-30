@@ -4,7 +4,7 @@ body,html {
 }
 
 body {
-	background: #384B64;
+	background: #3E4D60;
 }
 
 .box {
@@ -75,10 +75,14 @@ body {
 
 @-webkit-keyframes fly-high {
 	0%		{bottom: 0%;}
-	10%		{bottom: 10%;}
-	20%		{bottom: 20%;}
-	30%		{bottom: 30%; left: 50%;}
-	60%		{left: 51%;}
-	90%		{left: 53%;}
+	10%		{bottom: 5%;}
+	15%		{bottom: 10%;}
+	20%		{bottom: 15%;}
+	25%		{bottom: 20%;}
+	30%		{bottom: 25%;}
+	35%		{bottom: 30%;}
+	40%		{bottom: 40%;}
+	60%		{left: 50%; @include transform(rotate(0deg));}
+	90%		{left: 51%; @include transform(rotate(10deg));}
 	100% 	{bottom: 150%;}
 }
