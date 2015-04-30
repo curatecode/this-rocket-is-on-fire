@@ -13,23 +13,31 @@ body {
 
 .launcher {
 	position: absolute;
-	bottom: 10px;
-	right: 10px;
-	height: 100px;
-	width: 100px;
+	bottom: 50%;
+	right: 50%;
+	height: 80px;
+	width: 80px;
 	display: block;
 	background: #fff;
-	padding: 4px 6px 6px 4px;
+	padding: 9px 16px 16px 9px;
+	@include transform(translate(50%,50%));
 	@include rounded(100px);
-	@include box-shadow(0px,3px,1px,rgba(0,0,0,0.2));
+	@include box-shadow-multi(0px 3px 1px rgba(0,0,0,0.2), inset 0 -2px 0 rgba(0,0,0,0.5));
 	a {
 		display: block;
-		border: 1px solid #F02222;
+		border: 3px solid #A32424;
 		height: 100%;
 		width: 100%;
+		background: #F02222;
 		@include gradient(#D71E1E,#F02222);
-		@include box-shadow-multi(inset 0 -4px 0 rgba(0, 0, 0, 0.1), inset 0 2px 1px #FF8686);
+		@include box-shadow-multi(inset 0 -3px 0 rgba(0, 0, 0, 0.2), inset 0 3px 0px #FF5959);
 		@include rounded(100px);
+		&:hover {
+			@include gradient(#F24646,#F02222);
+		}
+		&:focus {
+			@include box-shadow-inset(0,3px,0,rgba(0, 0, 0, 0.2));
+		}
 	}
 }
 
