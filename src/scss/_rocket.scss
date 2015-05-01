@@ -1,0 +1,101 @@
+#milano {
+	height: 12rem;
+	width: 6rem;
+	margin: 50px auto auto;
+	position: relative;
+	
+	.milano-head {
+		position: relative;
+		height: 3rem;
+		width: 4rem;
+		display: block;
+		margin: auto;
+		.top-left {
+			position: absolute;
+			left: 0;
+			top: 0;
+			height: 3rem;
+			width: 2rem;
+			overflow: hidden;
+			&:before {
+				position: absolute;
+				content: '';
+				height: 7rem;
+				width: 6rem;
+				top: -.6rem;
+				background: #E23E3E;
+				-webkit-border-top-left-radius: 13rem 33rem;
+				-moz-border-top-left-radius: 13rem 33rem;
+				border-top-left-radius: 13rem 33rem;
+				@include transform(rotate(14deg));
+			}	
+		}
+		.top-right {
+			position: absolute;
+			right: 0;
+			top: 0;
+			height: 3rem;
+			width: 2rem;
+			overflow: hidden;
+			&:before {
+				position: absolute;
+				content: '';
+				height: 7rem;
+				width: 6rem;
+				top: -.6rem;
+				right: 0;
+				background: #D52E2E;
+				-webkit-border-top-left-radius: 13rem 33rem;
+				-moz-border-top-left-radius: 13rem 33rem;
+				border-top-right-radius: 13rem 33rem;
+				@include transform(rotate(-14deg));
+			}	
+		}
+	}
+
+	.milano-body {
+		position: relative;
+		height: 5rem;
+		width: 6rem;
+		display: block;
+		margin: auto;
+		.body-left {
+			position: absolute;
+			left: 0;
+			top: 0;
+			height: 5rem;
+			width: 3rem;
+			overflow: hidden;
+			&:before {
+				position: absolute;
+				content: '';
+				height: 7rem;
+				width: 3rem;
+				background: #EBF1F4;
+				top: -1rem;
+				-webkit-border-top-left-radius: 13rem 40rem;
+				-moz-border-top-left-radius: 13rem 40rem;
+				border-top-left-radius: 13rem 40rem;
+			}
+		}
+		.body-right {
+			position: absolute;
+			right: 0;
+			top: 0;
+			height: 5rem;
+			width: 3rem;
+			overflow: hidden;
+			&:before {
+				position: absolute;
+				content: '';
+				height: 7rem;
+				width: 3rem;
+				background: #D6E1E7;
+				top: -1rem;
+				-webkit-border-top-right-radius: 13rem 40rem;
+				-moz-border-top-right-radius: 13rem 40rem;
+				border-top-right-radius: 13rem 40rem;
+			}
+		}
+	}
+}
