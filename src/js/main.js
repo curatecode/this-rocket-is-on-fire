@@ -13,6 +13,7 @@ $(document).ready(function() {
 		e.preventDefault();
 		
 		$('#fly-me').addClass('to-the-moon');
+		$('.flame-container').addClass('active');
 		
 		$(this).parent().delay(1000).queue(function() {
 			$(this).addClass('hide-me').dequeue();
@@ -21,6 +22,7 @@ $(document).ready(function() {
 		setTimeout(function() {
 			$('.launcher').removeClass('hide-me');
 			$('#fly-me').removeClass('to-the-moon');
+			$('.flame-container').removeClass('active');
 		},15000);
 
 	});
