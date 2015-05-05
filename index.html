@@ -4,7 +4,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+	
+	<meta property="fb:app_id" 			content="1569327899993410" /> 
+	<meta property="og:type"   			content="article" /> 
   <meta property="og:url"    			content="http://curateco.de/this-rocket-is-on-fire/" /> 
   <meta property="og:title"  			content="THIS ROCKET IS ON FIRE!" /> 
   <meta property="og:description" content="Playing around with some CSS animations and jQuery. Everything is made of CSS." />
@@ -19,9 +21,41 @@
 
 </head>
 <body>
+
+	<script>
+	  window.fbAsyncInit = function() {
+	    FB.init({
+	      appId      : '1569327899993410',
+	      xfbml      : true,
+	      version    : 'v2.3'
+	    });
+	  };
+
+	  (function(d, s, id){
+	     var js, fjs = d.getElementsByTagName(s)[0];
+	     if (d.getElementById(id)) {return;}
+	     js = d.createElement(s); js.id = id;
+	     js.src = "//connect.facebook.net/en_US/sdk.js";
+	     fjs.parentNode.insertBefore(js, fjs);
+   	}(document, 'script', 'facebook-jssdk'));
+	</script>
   
   <div class="box">
+  	
+  	<div class="social-box">
+  		<a class="twitter-share-button"
+			  href="https://twitter.com/share"
+			  data-via="twitterdev">
+			Tweet
+			</a>
+			<script>
+			window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
+			</script>
+  		<div class="fb-like" data-href="http://curateco.de/this-rocket-is-on-fire/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+  	</div>
+
   	<span class="launcher"><a href="">LAUNCH</a></span>
+    
     <div id="fly-me">
       <div id="milano">
 		    <div class="milano-head">
