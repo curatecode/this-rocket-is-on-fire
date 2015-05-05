@@ -1,9 +1,13 @@
-$(document).ready(function() {
-	
+function boxSizr() {
 	$('.box').css({
 		'height' : $(window).height(),
 		'width'  : $(window).width()
 	});
+};
+
+$(document).ready(function() {
+
+	boxSizr();
 
 	$('.launcher a').on('click', function(e) {
 		e.preventDefault();
@@ -20,4 +24,8 @@ $(document).ready(function() {
 		},15000);
 
 	});
+});
+
+$(window).resize(function() {
+	boxSizr();
 });
