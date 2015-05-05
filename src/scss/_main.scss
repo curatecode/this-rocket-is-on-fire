@@ -60,8 +60,9 @@ body {
 	position: absolute;
 	left: 50%;
 	bottom: 0;
-	margin-left: -6rem;
-	@include transform(translate(50%, 0));
+	// margin-left: -6rem;
+	// width: 6rem;
+	@include transform(translate(-50%, 0));
 }
 
 .to-the-moon {
@@ -79,7 +80,7 @@ body {
 	25%		{bottom: 25%;}
 	30%		{bottom: 30%;}
 	40%		{bottom: 40%;}
-	55%		{bottom: 55%; left: 50%; @include transform(rotate(0deg));}
-	75%		{bottom: 75%; left: 50.2%; @include transform(rotate(2deg));}
-	100% 	{bottom: 110%; left: 50.9%; @include transform(rotate(3deg));}
+	55%		{bottom: 55%; @include transform(rotate(0deg) translate(-50.2%, 0));}
+	75%		{bottom: 75%; @include transform(rotate(2deg) translate(-50.4%, 0));}
+	100% 	{bottom: 110%; @include transform(rotate(3deg) translate(-50.8%, 0));}
 }
